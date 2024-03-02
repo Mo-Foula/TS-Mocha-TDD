@@ -1,0 +1,38 @@
+{
+  "name": "supermarket-receipt-mocha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-ts": "mocha --require ts-node/register --recursive test/**/*.test.ts",
+    "test:watch-ts": "npm run test -- --watch-extensions ts --watch",
+    "test-js": "mocha --require babel-core/register --require babel-polyfill test/*.test.js",
+    "test:watch": "npm run test-js -- --watch",
+    "compile": "tsc"
+  },
+  "author": "superzadeh <superzadeh@outlook.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/assert": "^1.5.10",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "approvals": "^3.0.2",
+    "assert": "^2.1.0",
+    "babel-core": "6.26.3",
+    "babel-plugin-rewire": "1.2.0",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "chai": "4.2.0",
+    "mocha": "6.2.2",
+    "sinon": "7.5.0",
+    "sinon-chai": "3.3.0"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.119",
+    "@types/node": "^10.12.18",
+    "lodash": "^4.17.19",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  }
+}
