@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node dist/index.js",
     "test-ts": "mocha --require ts-node/register --recursive test/**/*.test.ts",
-    "test:watch-ts": "npm run test -- --watch-extensions ts --watch",
+    "test:watch-ts": "npm run test-ts -- --watch-extensions ts --watch",
     "test-js": "mocha --require babel-core/register --require babel-polyfill test/*.test.js",
     "test:watch": "npm run test-js -- --watch",
-    "compile": "tsc"
+    "build-run": "npm run build && node dist/index.js",
+    "dev": "npx nodemon src/index.ts",
+    "build": "tsc",
+    "watch": "npx tsc-watch --esModuleInterop src/index.ts --outDir ./dist --onSuccess \"node ./dist/index.js\""
   },
   "author": "superzadeh <superzadeh@outlook.com>",
   "license": "ISC",
@@ -32,6 +36,7 @@
     "@types/lodash": "^4.14.119",
     "@types/node": "^10.12.18",
     "lodash": "^4.17.19",
+    "nodemon": "^3.1.0",
     "ts-node": "^7.0.1",
     "typescript": "^3.2.2"
   }

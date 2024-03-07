@@ -7,3 +7,6 @@ export class Test {
         return true
     }
 }
+
+console.log('Running Applications')
+console.log(Test.test_true());
